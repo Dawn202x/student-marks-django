@@ -1,55 +1,135 @@
 # 🎓 Student Marks Management System
 
-A secure and responsive web application developed using **Python and Django** to manage student academic records, authentication, marks, and performance analytics.
+A secure and responsive web application developed using **Python and Django** to manage student academic records, marks, profiles, authentication, and performance analytics.
 
-This project was developed as part of my learning journey in **backend development, database management, authentication, and data visualization**.
+This project was developed as part of my learning journey in **backend development, database management, authentication, data analysis, and web application development**.
 
-## ✨ Key Features
+---
 
-* 🔐 Student Authentication — Login and Signup
-* 👤 Role-based access control for Students and Admin
-* 🛡️ Admin-controlled user access
-* 📊 Student Marks Management
-* 📈 Performance Analytics using Matplotlib
-* 🧮 Automatic Average Marks Calculation
-* 🔑 Forgot Password functionality with PIN verification
-* ⚙️ Django Admin Panel for managing Users, Marks, and Profiles
-* 📱 Responsive and clean user interface
+## ✨ Features
 
-## 🔐 System Highlights
+* 🔐 **Student Authentication**
 
-* Students and Admins have different levels of access.
-* Only approved users can access the student system.
-* Student data is displayed based on authenticated access.
-* Admins can manage users, profiles, and academic records through the Django Admin Panel.
+  * Login
+  * Signup
+  * Logout
+
+* 👤 **Role-Based Access Control**
+
+  * Student access
+  * Admin access
+  * Admin-controlled user approval
+
+* 📊 **Marks Management**
+
+  * Add and manage student marks
+  * View academic records
+  * Calculate average marks
+
+* 📈 **Performance Analytics**
+
+  * Visual representation of student performance
+  * Charts generated using Matplotlib
+
+* 🔑 **Password Recovery**
+
+  * Forgot password functionality
+  * PIN-based verification
+
+* ⚙️ **Django Admin Panel**
+
+  * Manage users
+  * Manage student profiles
+  * Manage marks and academic records
+
+* 📱 **Responsive User Interface**
+
+  * Clean and user-friendly design
+  * Responsive pages for different screen sizes
+
+---
+
+## 🔐 Access Control
+
+The application implements controlled access between **Students and Administrators**.
+
+### Student
+
+Students can:
+
+* Log in using approved credentials
+* View their academic records
+* View marks and performance
+* View calculated average marks
+
+### Admin
+
+Administrators can:
+
+* Manage users
+* Approve and control user access
+* Manage student profiles
+* Add and manage marks
+* Access the Django Admin Panel
+
+---
 
 ## 🛠️ Technologies Used
 
-| Technology | Purpose                   |
-| ---------- | ------------------------- |
-| Python     | Backend programming       |
-| Django     | Web framework             |
-| Pandas     | Data processing           |
-| NumPy      | Numerical operations      |
-| Matplotlib | Data visualization        |
-| HTML       | Page structure            |
-| CSS        | Styling and responsive UI |
-| SQLite     | Database                  |
+| Technology       | Purpose                                    |
+| ---------------- | ------------------------------------------ |
+| **Python**       | Backend programming                        |
+| **Django**       | Web application framework                  |
+| **Pandas**       | Data processing                            |
+| **NumPy**        | Numerical operations                       |
+| **Matplotlib**   | Data visualization                         |
+| **HTML5**        | Web page structure                         |
+| **CSS3**         | Styling and responsive design              |
+| **SQLite**       | Database                                   |
+| **Git & GitHub** | Version control and source code management |
+
+---
 
 ## 📊 Performance Analytics
 
-The system provides visual representations of student performance using **Matplotlib**, along with calculated average marks to help understand academic performance.
+The application uses **Matplotlib** to generate visual representations of student academic performance.
+
+The system also calculates the **average marks** based on the student's academic records.
+
+---
+
+## 🗄️ Database
+
+The project uses **SQLite** as the database.
+
+The database is used to manage:
+
+* User information
+* Student profiles
+* Academic marks
+* Authentication-related data
+
+---
 
 ## 🌐 Live Demo
 
-[**View Live Demo**](https://lnkd.in/g2ssqWK9)
+**Live Application:**
+https://dawn202x.pythonanywhere.com/
 
-### Demo Login
+> The live application may require approved login credentials to access student features.
 
-> ⚠️ Demo account only. Do not use this credential for any personal or production account.
+---
+
+## 🔑 Demo Account
+
+For demonstration purposes:
 
 **Username:** `student_demo`
 **Password:** `student@tce`
+
+> ⚠️ This is a demo account. Do not use these credentials for any personal or production account.
+
+---
 
 ## 📚 Learning Outcomes
 
@@ -58,27 +138,45 @@ Through this project, I strengthened my understanding of:
 * Django backend development
 * Authentication and authorization
 * Role-based access control
-* Database design and management
 * CRUD operations
-* Data analysis and visualization
+* Database design and management
 * Django Admin
+* Data processing
+* Data visualization
 * Full-stack web application development
 * Web application deployment
+* Git and GitHub version control
 
-## 🚀 Future Improvements
+---
 
-* Email-based password recovery
-* Advanced student performance reports
-* Export academic reports as PDF
-* Improved admin dashboard
-* Additional data visualization features
+## 🚀 Future Enhancements
 
-## 👨‍💻 Project
+Possible future improvements include:
 
-**Student Marks Management System**
+* 📧 Email-based password recovery
+* 📄 PDF generation for academic reports
+* 📊 Advanced performance dashboards
+* 📱 Improved mobile responsiveness
+* 📈 Additional student analytics
+* 👨‍🏫 Enhanced admin management features
 
-Built with ❤️ using **Python & Django** as part of my software development learning journey.
+---
 
-## 📌 Tags
+## 👨‍💻 Project Information
 
-`#Python` `#Django` `#WebDevelopment` `#BackendDevelopment` `#SoftwareEngineering` `#StudentProject` `#FullStackDevelopment` `#Programming` `#DataVisualization`
+**Project:** Student Marks Management System
+**Framework:** Django
+**Language:** Python
+**Database:** SQLite
+**Deployment:** PythonAnywhere
+**Version Control:** Git & GitHub
+
+---
+
+## 📌 Author
+
+Developed as a learning project to explore **Python, Django, backend development, database management, and data visualization**.
+
+---
+
+### ⭐ If you find this project useful, feel free to explore the repository and provide feedback!
