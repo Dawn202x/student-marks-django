@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Mark</title>
+    <link rel="stylesheet" href="{% static 'marks/css/style.css' %}">
+</head>
+<body>
+    <div class="page">
+        <h1>Add a Mark</h1>
+        <div class="card">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Add</button>
+            </form>
+        </div>
+        <p style="margin-top:20px;"><a href="{% url 'show_marks' %}" style="color:#82b1ff;">Back to my marks</a></p>
+    </div>
+</body>
+</html>

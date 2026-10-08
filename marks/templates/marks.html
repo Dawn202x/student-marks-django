@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks</title>
+    <link rel="stylesheet" href="{% static 'marks/css/style.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="page">
+        <h1>Welcome, {{ request.user.username }}</h1>
+
+        <p>
+            {% if is_admin %}
+<a href="{% url 'add_mark' %}" style="color:#82b1ff;">+ Add a mark</a>
+&nbsp; | &nbsp;
+{% endif %}
+            &nbsp; | &nbsp;
+          <form method="post" action="{% url 'logout' %}" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit" style="background:none; border:none; color:#82b1ff; text-decoration:underline; cursor:pointer; font-size:inherit; padding:0;">Log out</button>
+</form>
+        </p>
+
+        <div class="card tilt-card">
+            {{ table|safe }}
+        </div>
+
+        <h2>Average Marks</h2>
+        <div class="card tilt-card average-box">{{ average }}</div>
+
+        <h2>Average Marks per Subject</h2>
+        <div class="card tilt-card">
+            <ul>
+                {% for subject, avg in subject_avg.items %}
+                    <li>{{ subject }}: {{ avg }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        {% if has_chart %}
+        <h2>Chart</h2>
+        <div class="card tilt-card">
+            <img src="{% static chart_path %}?v=1" alt="Marks chart">
+        </div>
+        {% endif %}
+    </div>
+
+    <script src="{% static 'marks/js/scene.js' %}"></script>
+    <script src="{% static 'marks/js/tilt.js' %}"></script>
+</body>
+</html>

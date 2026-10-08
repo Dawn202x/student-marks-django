@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log In</title>
+    <link rel="stylesheet" href="{% static 'marks/css/style.css' %}">
+</head>
+<body>
+    <div class="page">
+        <h1>Log In</h1>
+        <div class="card">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Log In</button>
+            </form>
+            <p style="margin-top:10px;"><a href="{% url 'forgot_password' %}" style="color:#82b1ff;">Forgot password?</a></p>
+        </div>
+    </div>
+</body>
+</html>
